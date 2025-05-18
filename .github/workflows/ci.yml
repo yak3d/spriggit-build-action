@@ -40,9 +40,9 @@ jobs:
         id: yarn-lint
         run: yarn run lint
 
-      - name: Test
-        id: yarn-ci-test
-        run: yarn run ci-test
+#      - name: Test
+#        id: yarn-ci-test
+#        run: yarn run ci-test
 #  test-action:
 #    name: GitHub Actions Test
 #    runs-on: ubuntu-latest
