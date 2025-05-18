@@ -1,0 +1,13 @@
+SpriggitSource:
+  PackageName: Spriggit.Yaml.Skyrim
+  Version: 0.38.2
+ModKey: YAKSSE_ExamplePlugin.esp
+GameRelease: SkyrimSE
+ModHeader:
+  Flags:
+    - Small
+  Author: ''
+  MasterReferences:
+    - Master: Skyrim.esm
+      FileSize: 0
+  INCC: 0

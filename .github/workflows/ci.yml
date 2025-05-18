@@ -39,24 +39,26 @@ jobs:
       - name: Lint
         id: yarn-lint
         run: yarn run lint
-#      - name: Test
-#        id: yarn-ci-test
-#        run: yarn run ci-test
-#  test-action:
-#    name: GitHub Actions Test
-#    runs-on: ubuntu-latest
-#
-#    steps:
-#      - name: Checkout
-#        id: checkout
-#        uses: actions/checkout@v4
-#
-#      - name: Test Local Action
-#        id: test-action
-#        uses: ./
-#        with:
-#          milliseconds: 2000
-#
-#      - name: Print Output
-#        id: output
-#        run: echo "${{ steps.test-action.outputs.time }}"
+  #      - name: Test
+  #        id: yarn-ci-test
+  #        run: yarn run ci-test
+  test-action:
+    name: GitHub Actions Test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        id: checkout
+        uses: actions/checkout@v4
+
+      - name: Test Local Action
+        id: test-action
+        uses: ./
+        with:
+          spriggitVersion: 0.38.2
+          source: ./plugin
+          destination: TestPlugin.esp
+
+      - name: Print Output
+        id: output
+        run: echo "${{ steps.test-action.outputs.time }}"

@@ -1,0 +1,6 @@
+{
+  "PackageName": "Spriggit.Yaml.Skyrim",
+  "Version": "0.38.2",
+  "Release": "SkyrimSE",
+  "ModKey": "YAKSSE_ExamplePlugin.esp"
+}
