@@ -17,6 +17,7 @@ jest.unstable_mockModule('../src/wait.js', () => ({ wait }))
 // mocks are used in place of any actual dependencies.
 
 describe('main.ts', () => {
+  it('does nothing', async () => {})
   // beforeEach(() => {
   //   // Set the action's inputs as return values from core.getInput().
   //   core.getInput.mockImplementation(() => '500')
