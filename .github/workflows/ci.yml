@@ -30,15 +30,15 @@ jobs:
 
       - name: Install Dependencies
         id: install
-        run: yarn install
+        run: npm install
 
       - name: Check Format
         id: yarn-format-check
-        run: yarn run format:check
+        run: npm run format:check
 
       - name: Lint
         id: yarn-lint
-        run: yarn run lint
+        run: npm run lint
   #      - name: Test
   #        id: yarn-ci-test
   #        run: yarn run ci-test
