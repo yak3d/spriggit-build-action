@@ -12,5 +12,5 @@ inputs:
     description: 'Which Spriggit version to use'
     required: true
 runs:
-  using: 'node22'
+  using: node20
   main: 'index.ts'
