@@ -38,7 +38,7 @@ jobs:
 
       - name: Install Dependencies
         id: npm-ci
-        run: npm ci
+        run: yarn install
 
       - name: Setup Ruby
         id: setup-ruby
