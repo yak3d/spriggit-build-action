@@ -39,7 +39,6 @@ jobs:
       - name: Lint
         id: yarn-lint
         run: yarn run lint
-
 #      - name: Test
 #        id: yarn-ci-test
 #        run: yarn run ci-test
