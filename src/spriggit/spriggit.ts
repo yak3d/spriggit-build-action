@@ -54,6 +54,7 @@ export const buildPlugin = async (pluginPath: string, pluginDest: string) => {
         console.error(
           `There was an error running ${spriggitCli}, see stderr below`
         )
+        console.log(stdout)
         console.error(`stderr: ${stderr}`)
         throw error
       }

@@ -43167,6 +43167,7 @@ const buildPlugin = async (pluginPath, pluginDest) => {
         ` deserialize --InputPath ${pluginPath} --OutputPath ${pluginDest}`, (error, stdout, stderr) => {
         if (error) {
             console.error(`There was an error running ${spriggitCli}, see stderr below`);
+            console.log(stdout);
             console.error(`stderr: ${stderr}`);
             throw error;
         }
