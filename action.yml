@@ -1,24 +1,16 @@
-name: The name of your action here
-description: Provide a description here
-author: Your name or organization here
-
-# Add your action's branding here. This will appear on the GitHub Marketplace.
-branding:
-  icon: heart
-  color: red
-
-# Define your inputs here.
+name: 'Spriggit Build'
+description: 'Builds an ESP/ESM using Spriggit'
 inputs:
-  milliseconds:
-    description: Your input description here
+  source:
+    description:
+      'Path to the ESP/ESM source files (the YAML/JSON from Spriggit)'
     required: true
-    default: '1000'
-
-# Define your outputs here.
-outputs:
-  time:
-    description: Your output description here
-
+  destination:
+    description: 'Path to the ESP/ESM you want to build into with Spriggit'
+    required: true
+  spriggitVersion:
+    description: 'Which Spriggit version to use'
+    required: true
 runs:
-  using: node20
-  main: dist/index.js
+  using: 'node22'
+  main: 'index.ts'

@@ -1,5 +1,6 @@
 import * as core from '@actions/core'
-import { wait } from './wait.js'
+import console from 'console'
+import { buildPlugin, downloadSpriggit } from './spriggit/spriggit.js'
 
 /**
  * The main function for the action.
@@ -8,18 +9,16 @@ import { wait } from './wait.js'
  */
 export async function run(): Promise<void> {
   try {
-    const ms: string = core.getInput('milliseconds')
+    const source = core.getInput('source')
+    const destination = core.getInput('destination')
+    const spriggitVersion = core.getInput('spriggitVersion')
 
-    // Debug logs are only output if the `ACTIONS_STEP_DEBUG` secret is true
-    core.debug(`Waiting ${ms} milliseconds ...`)
+    console.log(`Using the esp/esm data at '${source}' to build the plugin`)
+    console.log(`Using Spriggit version ${spriggitVersion}`)
 
-    // Log the current timestamp, wait, then log the new timestamp
-    core.debug(new Date().toTimeString())
-    await wait(parseInt(ms, 10))
-    core.debug(new Date().toTimeString())
+    await downloadSpriggit(spriggitVersion)
 
-    // Set outputs for other workflow steps to use
-    core.setOutput('time', new Date().toTimeString())
+    await buildPlugin(source, destination)
   } catch (error) {
     // Fail the workflow run if an error occurs
     if (error instanceof Error) core.setFailed(error.message)
