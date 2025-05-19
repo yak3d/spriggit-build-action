@@ -52,7 +52,7 @@
     "@rollup/plugin-typescript": "^12.1.1",
     "@types/follow-redirects": "^1.14.4",
     "@types/jest": "^29.5.14",
-    "@types/node": "^20.17.46",
+    "@types/node": "^20.17.48",
     "@typescript-eslint/eslint-plugin": "^8.32.0",
     "@typescript-eslint/parser": "^8.32.0",
     "eslint": "^9.26.0",
