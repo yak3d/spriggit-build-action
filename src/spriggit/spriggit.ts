@@ -48,7 +48,7 @@ export const buildPlugin = async (pluginPath: string, pluginDest: string) => {
 
   exec(
     spriggitCli +
-      ` deserialize --InputPath ${pluginPath} --OutputPath ${pluginDest}`,
+      ` deserialize --InputPath "${pluginPath}" --OutputPath ${pluginDest}`,
     (error, stdout, stderr) => {
       if (error) {
         console.error(
