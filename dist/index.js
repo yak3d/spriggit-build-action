@@ -43164,7 +43164,7 @@ const buildPlugin = async (pluginPath, pluginDest) => {
         throw Error(`Plugin was already found at ${pluginDest}`);
     }
     exec$1(spriggitCli +
-        ` deserialize --InputPath "${pluginPath}" --OutputPath ${pluginDest}`, (error, stdout, stderr) => {
+        ` deserialize --InputPath "${pluginPath}" --OutputPath "${pluginDest}"`, (error, stdout, stderr) => {
         if (error) {
             console.error(`There was an error running ${spriggitCli}, see stderr below`);
             console.log(stdout);
